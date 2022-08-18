@@ -5,19 +5,19 @@
         
 		<div class="caption">
 			<div *ngIf="!dbOfREForLoopingCards.showDetails">
-				<h4>
+				<h5>
 					<span class="label label-primary">
 						{{dbOfREForLoopingCards.type}}
 					</span>
-				</h4>
-				<h3>
-					<i class="glyphicon glyphicon-tag"></i>
-					{{dbOfREForLoopingCards.price | currency:'USD': true}}
-				</h3>
+				</h5>
 				<h4>
 					<i class="glyphicon glyphicon-tag"></i>
-					{{dbOfREForLoopingCards.des}}
+					{{dbOfREForLoopingCards.price | currency:'USD': true}}
 				</h4>
+				<p>
+					<i class="glyphicon glyphicon-tag"></i>
+					{{dbOfREForLoopingCards.des}}
+				</p>
 				<hr>
 				<button 
 				class="btn btn-sm btn-success"
@@ -28,15 +28,16 @@
 			</div>
 			<div *ngIf="dbOfREForLoopingCards.showDetails">
 				<div class="details">
-					<h4>
+					<h5>
 						<span class="label label-primary">
-							Beds:{{dbOfREForLoopingCards.bedrooms}}
+							Beds: {{dbOfREForLoopingCards.bedrooms}}
 						</span>
+						<br>
 						<span class="label label-primary">
-							Bathrooms:{{dbOfREForLoopingCards.bathrooms}}
+							Bathrooms: {{dbOfREForLoopingCards.bathrooms}}
 						</span>
-					</h4>
-					<p>{{dbOfREForLoopingCards.des}}</p>
+					</h5>
+					<p>SqFt: {{dbOfREForLoopingCards.area}}</p>
 					<hr>
 					<button
 					class="btn btn-danger btn-sm"
