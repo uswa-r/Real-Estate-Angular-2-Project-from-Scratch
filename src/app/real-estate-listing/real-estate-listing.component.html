@@ -19,9 +19,31 @@
 					{{dbOfREForLoopingCards.des}}
 				</h4>
 				<hr>
-				<button class="btn btn-sm btn-success" *ngIf="!dbOfREForLoopingCards.showDetails" (click)="dbOfREForLoopingCards.showDetails = !dbOfREForLoopingCards.showDetails">
+				<button 
+				class="btn btn-sm btn-success"
+				*ngIf="!dbOfREForLoopingCards.showDetails" 
+				(click)="dbOfREForLoopingCards.showDetails = !dbOfREForLoopingCards.showDetails">
 					Details
 				</button>
+			</div>
+			<div *ngIf="dbOfREForLoopingCards.showDetails">
+				<div class="details">
+					<h4>
+						<span class="label label-primary">
+							Beds:{{dbOfREForLoopingCards.bedrooms}}
+						</span>
+						<span class="label label-primary">
+							Bathrooms:{{dbOfREForLoopingCards.bathrooms}}
+						</span>
+					</h4>
+					<p>{{dbOfREForLoopingCards.des}}</p>
+					<hr>
+					<button
+					class="btn btn-danger btn-sm"
+					(click)="dbOfREForLoopingCards.showDetails = !dbOfREForLoopingCards.showDetails">
+				    Close
+				    </button>
+				</div>
 			</div>
 		</div>
 	</div>
