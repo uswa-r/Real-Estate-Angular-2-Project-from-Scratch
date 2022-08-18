@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { db } from 'Database/database';
 @Component({
   selector: 'app-real-estate-cards',
@@ -8,6 +8,8 @@ import { db } from 'Database/database';
 export class RealEstateCardsComponent implements OnInit {
 
   db: Array<any> = db;
+  @Input('dbOfREForLoopingCards') dbOfREForLoopingCards:any;
+
   constructor() { }
 
   ngOnInit(): void {
