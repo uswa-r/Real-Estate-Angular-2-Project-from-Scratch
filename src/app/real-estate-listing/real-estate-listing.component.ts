@@ -9,7 +9,7 @@ import { db } from 'Database/database';
 export class RealEstateListingComponent implements OnInit {
 
   db: Array<any> = db;
-
+  
   constructor() { }
 
   ngOnInit(): void {

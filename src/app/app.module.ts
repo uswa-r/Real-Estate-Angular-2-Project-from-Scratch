@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RealEstateListingComponent } from './real-estate-listing/real-estate-listing.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RealEstateCardsComponent } from './real-estate-cards/real-estate-cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RealEstateListingComponent,
-    NavbarComponent
+    NavbarComponent,
+    RealEstateCardsComponent
   ],
   imports: [
     BrowserModule,
