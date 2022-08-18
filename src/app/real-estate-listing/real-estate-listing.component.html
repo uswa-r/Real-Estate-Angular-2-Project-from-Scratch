@@ -1,4 +1,52 @@
-<div *ngFor="let dbOfREForLoopingCards" class="img-thumbnail">
-	<app-real-estate-cards [dbOfREForLoopingCards]="dbOfREForLoopingCards" class="col col-lg-4"></app-real-estate-cards>
-	<router-outlet></router-outlet>
+<div class="container">
+<div class="row">
+	<div *ngFor="let dbOfREForLoopingCards of db" class="col col-sm-4 my-5 img-thumbnail">
+		<img src="/Real-Estate-Angular-2-Project-from-Scratch/src/assets/Images/{{ dbOfREForLoopingCards.image }}.jpg" class="img-fluid" style="height: 40px; width: 100px;">
+        
+		<div class="caption">
+			<div *ngIf="!dbOfREForLoopingCards.showDetails">
+				<h5>
+					<span class="label label-primary">
+						{{dbOfREForLoopingCards.type}}
+					</span>
+				</h5>
+				<h4>
+					<i class="glyphicon glyphicon-tag"></i>
+					{{dbOfREForLoopingCards.price | currency:'USD': true}}
+				</h4>
+				<p>
+					<i class="glyphicon glyphicon-tag"></i>
+					{{dbOfREForLoopingCards.des}}
+				</p>
+				<hr>
+				<button 
+				class="btn btn-sm btn-success"
+				*ngIf="!dbOfREForLoopingCards.showDetails" 
+				(click)="dbOfREForLoopingCards.showDetails = !dbOfREForLoopingCards.showDetails">
+					Details
+				</button>
+			</div>
+			<div *ngIf="dbOfREForLoopingCards.showDetails">
+				<div class="details">
+					<h5>
+						<span class="label label-primary">
+							Beds: {{dbOfREForLoopingCards.bedrooms}}
+						</span>
+						<br>
+						<span class="label label-primary">
+							Bathrooms: {{dbOfREForLoopingCards.bathrooms}}
+						</span>
+					</h5>
+					<p>SqFt: {{dbOfREForLoopingCards.area}}</p>
+					<hr>
+					<button
+					class="btn btn-danger btn-sm"
+					(click)="dbOfREForLoopingCards.showDetails = !dbOfREForLoopingCards.showDetails">
+				    Close
+				    </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { db } from 'Database/database';
+import { db } from 'src/Database/database';
 
 @Component({
   selector: 'app-real-estate-listing',
@@ -9,7 +9,7 @@ import { db } from 'Database/database';
 export class RealEstateListingComponent implements OnInit {
 
   db: Array<any> = db;
-  
+
   constructor() { }
 
   ngOnInit(): void {
