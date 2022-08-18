@@ -1,1 +1,5 @@
-<pre>{{ db | json }}</pre>
+<div *ngFor="let dbOfREForLoopingCards of db">
+	<h3>{{dbOfREForLoopingCards.id}}</h3>
+	<h3>{{dbOfREForLoopingCards.type}}</h3>
+	<h3>{{dbOfREForLoopingCards.price}}</h3>
+</div>
