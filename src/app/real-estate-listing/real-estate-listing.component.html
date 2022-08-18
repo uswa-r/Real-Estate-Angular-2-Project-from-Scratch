@@ -1,10 +1,29 @@
 <div class="container">
 <div class="row">
-	<div *ngFor="let dbOfREForLoopingCards of db" class="col col-sm-4 my-5">
-		<h3>{{dbOfREForLoopingCards.id}}</h3>
-		<h3>{{dbOfREForLoopingCards.type}}</h3>
-		<h3>{{dbOfREForLoopingCards.price}}</h3>
-		<h3>{{dbOfREForLoopingCards.des}}</h3>
+	<div *ngFor="let dbOfREForLoopingCards of db" class="col col-sm-4 my-5 img-thumbnail">
+		<img src="/Real-Estate-Angular-2-Project-from-Scratch/src/assets/Images/{{ dbOfREForLoopingCards.image }}.jpg" class="img-fluid" style="height: 40px; width: 100px;">
+        
+		<div class="caption">
+			<div *ngIf="!dbOfREForLoopingCards.showDetails">
+				<h4>
+					<span class="label label-primary">
+						{{dbOfREForLoopingCards.type}}
+					</span>
+				</h4>
+				<h3>
+					<i class="glyphicon glyphicon-tag"></i>
+					{{dbOfREForLoopingCards.price | currency:'USD': true}}
+				</h3>
+				<h4>
+					<i class="glyphicon glyphicon-tag"></i>
+					{{dbOfREForLoopingCards.des}}
+				</h4>
+				<hr>
+				<button class="btn btn-sm btn-success" *ngIf="!dbOfREForLoopingCards.showDetails" (click)="dbOfREForLoopingCards.showDetails = !dbOfREForLoopingCards.showDetails">
+					Details
+				</button>
+			</div>
+		</div>
 	</div>
 </div>
 </div>

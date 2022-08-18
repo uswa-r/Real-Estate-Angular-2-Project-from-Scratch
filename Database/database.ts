@@ -7,7 +7,7 @@ export const db = [
 		"bedrooms":"2",
 		"bathrooms":"1.5",
 		"area":"195",
-		"image":"home-1",
+		"image":"../src/assets/Images/home-1.jpg",
 	},
 	{
 		"id": 2,
@@ -17,7 +17,7 @@ export const db = [
 		"bedrooms":"4",
 		"bathrooms":"3",
 		"area":"195",
-		"image":"home-2",
+		"image":"../src/assets/Images/home-2.jpg",
 	},
 	{
 		"id": 3,
@@ -27,7 +27,7 @@ export const db = [
 		"bedrooms":"2",
 		"bathrooms":"2",
 		"area":"195",
-		"image":"home-3",
+		"image":"../src/assets/Images/home-3.jpg",
 	},
 	{
 		"id": 4,
@@ -37,7 +37,7 @@ export const db = [
 		"bedrooms":"4",
 		"bathrooms":"4",
 		"area":"195",
-		"image":"home-4",
+		"image":"../src/assets/Images/home-4.jpg",
 	},
 	{
 		"id": 5,
@@ -47,7 +47,7 @@ export const db = [
 		"bedrooms":"2",
 		"bathrooms":"1.5",
 		"area":"195",
-		"image":"home-5",
+		"image":"../src/assets/Images/home-5.jpg",
 	},
 	{
 		"id": 6,
@@ -57,36 +57,6 @@ export const db = [
 		"bedrooms":"4",
 		"bathrooms":"3",
 		"area":"195",
-		"image":"home-6",
-	},
-	{
-		"id": 7,
-		"type":"Condo",
-		"price":"26000",
-		"des":"Nice place, view is really good!",
-		"bedrooms":"2",
-		"bathrooms":"1.5",
-		"area":"195",
-		"image":"home-7",
-	},
-	{
-		"id": 8,
-		"type":"House",
-		"price":"77000",
-		"des":"Nice place, view is really good!",
-		"bedrooms":"5",
-		"bathrooms":"5",
-		"area":"395",
-		"image":"home-8",
-	},
-	{
-		"id": 9,
-		"type":"Condo",
-		"price":"26000",
-		"des":"Nice place, view is really good!",
-		"bedrooms":"2",
-		"bathrooms":"1.5",
-		"area":"195",
-		"image":"home-9",
+		"image":"../src/assets/Images/home-6.jpg",
 	}
 ];
